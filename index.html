@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            NG Photograph Daily Life
+        </title>
+        <style>
+            body, html {
+                height: 100%;
+                margin: 0;
+                font-family: Arial;
+            }
+
+            /* Style tab links */
+            .tablink {
+                background-color: #555;
+                color: white;
+                float: left;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                padding: 14px 16px;
+                font-size: 17px;
+                width: 25%;
+            }
+
+            .tablink:hover {
+                background-color: #777;
+            }
+
+            /* Style the tab content (and add height:100% for full page content) */
+            .tabcontent {
+                color: white;
+                display: none;
+                padding: 100px 20px;
+                height: 100%;
+            }
+
+            #GY {background-color: rgb(222, 165, 165);}
+            #Libo {background-color: rgb(222, 196, 145);}
+            #Chin {background-color: rgb(136, 167, 168);}
+            #Stanley {background-color: rgb(166, 180, 211);}
+            #Mars {background-color: rgb(203, 161, 202);}
+        </style>
+        <script>
+            function openPage(pageName, elmnt, color) {
+            // Hide all elements with class="tabcontent" by default */
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Remove the background color of all tablinks/buttons
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+
+            // Show the specific tab content
+            document.getElementById(pageName).style.display = "block";
+
+            // Add the specific color to the button used to open the tab content
+            elmnt.style.backgroundColor = color;
+            }
+
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+
+        </script>
+    </head>
+    <body>
+        <button class="tablink" onclick="openPage('GY', this, 'red')">GY</button>
+        <button class="tablink" onclick="openPage('Libo', this, 'orange')" id="defaultOpen">Libo</button>
+        <button class="tablink" onclick="openPage('Chin', this, 'green')">Chin</button>
+        <button class="tablink" onclick="openPage('Stanley', this, 'blue')">Stanley</button>
+        <button class="tablink" onclick="openPage('Mars', this, 'purple')">Mars</button>
+
+        <div id="GY" class="tabcontent">
+            <h3>GY</h3>
+            <p>Home is where the heart is..</p>
+            <a href="https://www.facebook.com/profile.php?id=100014322544412" target="_blank">
+                <img src="01.jpg"width=250px>
+            </a>
+        </div>
+
+        <div id="Libo" class="tabcontent">
+            <h3>Libo</h3>
+            <p>Some news this fine day!</p>
+            <a href="https://www.facebook.com/profile.php?id=100010401946372" target="_blank">
+                <img src="02.jpg"width=250px>
+            </a>
+        </div>
+
+        <div id="Chin" class="tabcontent">
+            <h3>Chin</h3>
+            <p>Get in touch, or swing by for a cup of coffee.</p>
+            <a href="https://www.facebook.com/profile.php?id=100011913707758" target="_blank">
+                <img src="03.jpg"width=250px>
+            </a>
+        </div>
+
+        <div id="Stanley" class="tabcontent">
+            <h3>Stanley</h3>
+            <p>Who we are and what we do.</p>
+            <a href="https://www.facebook.com/stanley.liao.0909" target="_blank">
+                <img src="04.jpg"width=250px>
+            </a>
+        </div>
+        
+        <div id="Mars" class="tabcontent">
+            <h3>Mars</h3>
+            <p>Who we are and what we do.</p>
+            <a href="https://www.facebook.com/mars920218" target="_blank">
+                <img src="05.jpg"width=250px>
+            </a>
+        </div>
+    </body>
+</html>
